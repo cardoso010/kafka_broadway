@@ -1,0 +1,10 @@
+version: 2
+
+updates:
+- package-ecosystem: mix
+  directory: "/"
+  schedule:
+    interval: weekly
+  assignees:
+    - alanvardy
+  insecure-external-code-execution: allow
