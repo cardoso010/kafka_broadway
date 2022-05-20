@@ -53,7 +53,7 @@ defmodule KafkaBroadway.MixProject do
       {:broadway_kafka, "~> 0.3.5"},
 
       # Code Quality
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 

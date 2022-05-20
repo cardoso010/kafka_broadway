@@ -1,4 +1,5 @@
 defmodule KafkaBroadway.Kafka.Consumer do
+  @moduledoc false
   use Broadway
 
   require Logger
@@ -74,6 +75,7 @@ defmodule KafkaBroadway.Kafka.Consumer do
 
   defp producer_config_opts do
     config = get_config()
+
     [
       hosts: config[:hosts],
       group_id: config[:group_id],

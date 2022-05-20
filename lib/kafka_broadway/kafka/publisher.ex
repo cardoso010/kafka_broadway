@@ -1,4 +1,5 @@
 defmodule KafkaBroadway.Kafka.Publisher do
+  @moduledoc false
   require Logger
 
   def publish(message, topic, key \\ :undefined) when is_map(message) do
