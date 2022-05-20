@@ -73,10 +73,15 @@ defmodule KafkaBroadway.Kafka.Consumer do
   end
 
   defp producer_config_opts do
+    config = get_config()
     [
-      hosts: "localhost:9092",
-      group_id: "kafka_broadway",
-      topics: ["domain_fct_testSent_0"]
+      hosts: config[:hosts],
+      group_id: config[:group_id],
+      topics: config[:topics]
     ]
+  end
+
+  defp get_config do
+    Application.get_env(:kafka_broadway, __MODULE__)
   end
 end

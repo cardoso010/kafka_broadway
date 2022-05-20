@@ -52,6 +52,11 @@ config :kafka_broadway, KafkaBroadway.Application,
   kafka_hosts: System.get_env("KAFKA_HOSTS") || "localhost:9092",
   brod_producer: :brod_producer
 
+config :kafka_broadway, KafkaBroadway.Kafka.Consumer,
+  hosts: System.get_env("KAFKA_HOSTS") || "localhost:9092",
+  group_id: "kafka_broadway",
+  topics: ["domain_fct_messageSent_0"]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
