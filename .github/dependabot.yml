@@ -6,5 +6,5 @@ updates:
   schedule:
     interval: weekly
   assignees:
-    - alanvardy
+    - cardoso010
   insecure-external-code-execution: allow
